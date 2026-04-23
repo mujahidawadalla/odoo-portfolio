@@ -136,12 +136,23 @@
 | TC-007 | Automated AR follow-up email | ✅ Pass |---
 
 ## 🐛 Issues & Solutions
-
 | # | Issue | Root Cause | Solution |
 |---|-------|-----------|---------|
 | 1 | Invoice could not be created | Invoicing Policy was set to Ordered Qty | Changed to Delivered Quantities |
 | 2 | Negative stock appearing | Sales confirmed before goods received | Enabled Block Negative Stock in settings |
 | 3 | VAT applied to export customer | No fiscal position configured | Created Export - 0% fiscal position |
+
+| 4 | Product Type 'product' not found | 
+Odoo 18 changed value to 'Goods' | 
+Updated CSV file |
+
+| 5 | Tax name '14%' had 2 matches | 
+Egypt localization creates Sales + Purchase tax with same name | 
+Renamed to 'VAT 14% Sales' and 'VAT 14% Purchases' |
+
+| 6 | Arabic UOM 'م²' not recognized | 
+Odoo stores UOM in English | 
+Changed to 'm²' in CSV |
 
 ---
 
