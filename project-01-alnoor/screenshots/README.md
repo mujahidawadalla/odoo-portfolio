@@ -141,7 +141,6 @@
 | 1 | Invoice could not be created | Invoicing Policy was set to Ordered Qty | Changed to Delivered Quantities |
 | 2 | Negative stock appearing | Sales confirmed before goods received | Enabled Block Negative Stock in settings |
 | 3 | VAT applied to export customer | No fiscal position configured | Created Export - 0% fiscal position |
-
 | 4 | Product Type 'product' not found | 
 Odoo 18 changed value to 'Goods' | 
 Updated CSV file |
