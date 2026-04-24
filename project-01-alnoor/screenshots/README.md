@@ -88,6 +88,24 @@
 | Lock Date | Set after each month close | Prevent backdated journal entry edits |
 | Foreign Currency | USD secondary currency | Import purchases billed in USD |---## ⚙️ Chart of Accounts — Changes Made
 
+## 📦 Data Migration — Results
+
+| Data | Records | Status |
+|------|---------|--------|
+| Customers | 15 | ✅ Imported |
+| Vendors | 8 | ✅ Imported |
+| Products | 15 | ✅ Imported |
+| Opening Stock | 15 lines — 3 warehouses | ✅ Applied |
+
+## 🐛 Migration Issues & Solutions
+
+| # | Issue | Root Cause | Solution |
+|---|-------|-----------|---------|
+| 1 | Product Type 'product' not found | Odoo 18 changed value to 'Goods' | Updated CSV |
+| 2 | Tax '14%' had 2 matches | Egypt localization creates Sales + Purchase tax with same name | Renamed to VAT 14% Sales / VAT 14% Purchases |
+| 3 | Arabic UOM 'م²' not recognized | Odoo stores UOM in English | Changed to m² in CSV |
+| 4 | Location name not matching | Physical Inventory needs exact Complete Name | Used GIZ/Stock format |
+
 ### Accounts Added
 
 | Code | Account Name | Type | Reason |
