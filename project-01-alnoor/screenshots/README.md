@@ -143,7 +143,24 @@
 | 3 | VAT applied to export customer | No fiscal position configured | Created Export - 0% fiscal position |
 | 4 | Product Type 'product' not found | Odoo 18 changed value to 'Goods' | Updated CSV file |
 | 5 | Tax name '14%' had 2 matches | Egypt localization creates Sales + Purchase tax with same name | Renamed to 'VAT 14% Sales' and 'VAT 14% Purchases' |
-| 6 | Arabic UOM 'م²' not recognized | Odoo stores UOM in English | Changed to 'm²' in CSV |
+| 6 | Arabic UOM 'م²' not recognized | Odoo stores UOM in English | Changed to 'm²' in CSV |## ⚙️ Chart of Accounts — Changes Made
+
+### Accounts Added
+
+| Code | Account Name | Type | Reason |
+|------|-------------|------|--------|
+| 500015 | إيرادات سيراميك | Income | Revenue tracking per product line |
+| 500016 | إيرادات رخام | Income | Revenue tracking per product line |
+| 500017 | إيرادات دهانات | Income | Revenue tracking per product line |
+| 106012 | مخزون سيراميك | Current Assets | Inventory tracking per category |
+| 106013 | مخزون رخام | Current Assets | Inventory tracking per category |
+| 106014 | مخزون دهانات | Current Assets | Inventory tracking per category |
+| 101030 | بنك QNB (USD) | Bank and Cash | USD import payments |
+
+### Accounts Modified
+| Account | Change | Reason |
+|---------|--------|--------|
+| Bank (default) | Renamed to بنك CIB | Company uses CIB and QNB only |
 
 ---
 
