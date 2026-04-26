@@ -94,6 +94,34 @@
 | Discounts | ❌ Disabled | Fixed prices |
 
 ---
+## Inventory Settings
+
+| Setting | Value | Reason |
+|---------|-------|--------|
+| Warnings | ✅ Enabled | Alert for partner-specific issues |
+| Picking Policy | Ship all at once | Complete orders only — building materials |
+| Reception Report | ✅ Enabled | Verify received quantities on arrival |
+| Landed Costs | ✅ Enabled | Import costs affect true product cost |
+| Email Confirmation | ✅ Enabled | Notify customer when delivery is done |
+| Signature | ✅ Enabled | Proof of delivery |
+| Security Lead Time for Sales | 2 days | Buffer for delivery delays |
+| Security Lead Time for Purchase | 7 days | International shipping buffer |
+| Days to Purchase | 1 day | Internal PO approval time |
+
+## Inventory Settings Disabled & Why
+
+| Setting | Reason |
+|---------|--------|
+| Packages | Materials sold by m² not in boxes |
+| Batch Transfers | Simple operations — no route optimization needed |
+| Lots & Serial Numbers | Building materials need no batch tracking |
+| Multi-Step Routes | One-step sufficient for simple warehouse |
+| Dropshipping | Company handles own delivery |
+
+## Replenishment Strategy
+- Reorder Rules: Automatic (system triggers PO when stock hits minimum)
+- Reorder Rules setup: Pending — to be configured per product
+
 
 ## Key Decisions Log
 
