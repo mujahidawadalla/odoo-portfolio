@@ -162,6 +162,30 @@
 - Suspense Account: 201001 used for unmatched bank transactions
 - QNB journal currency set to USD for import purchases
 
+## Opening Balances
+
+| Entry | Amount | Status | Notes |
+|-------|--------|--------|-------|
+| Opening Balance 2024 (EGP) | 2,200,000 EGP | ✅ Posted | All EGP accounts |
+| Opening Balance QNB (USD) | 2,400 USD | ⏸️ Deferred | Multi-currency setup required |
+
+### Accounts Included in Opening Entry
+| Account | Type | Debit | Credit |
+|---------|------|-------|--------|
+| 101001 CIB بنك | Asset | 850,000 | — |
+| 105001 Cash | Asset | 25,000 | — |
+| 102020 عملاء محليون | Receivable | 420,000 | — |
+| 102021 عملاء خارج القاهرة | Receivable | 180,000 | — |
+| 106012 مخزون سيراميك | Asset | 310,000 | — |
+| 106013 مخزون دهانات | Asset | 175,000 | — |
+| 106014 مخزون رخام | Asset | 240,000 | — |
+| 201031 موردو الداخل | Payable | — | 380,000 |
+| 201030 موردو الخارج | Payable | — | 220,000 |
+| 202003 VAT Payable | Liability | — | 45,000 |
+| 201002 Payables (رواتب) | Liability | — | 35,000 |
+| 300001 رأس المال | Equity | — | 1,200,000 |
+| 300002 أرباح محتجزة | Equity | — | 320,000 |
+
 ## Key Decisions Log
 
 | Decision | Alternatives Considered | Chosen Because |
