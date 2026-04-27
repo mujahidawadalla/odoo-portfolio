@@ -144,6 +144,24 @@
 | Dropshipping | Not part of business model |
 | 3-way Matching | Enterprise feature — manual review instead |
 
+## Journals Configuration
+
+| Journal | Type | Currency | Account | Purpose |
+|---------|------|----------|---------|---------|
+| Customer Invoices | Sales | EGP | 500001 Sales | Customer invoicing |
+| Vendor Bills | Purchase | EGP | 400028 Others | Vendor billing |
+| بنك CIB | Bank | EGP | 101001 CIB | EGP bank transactions |
+| بنك QNB | Bank | USD | 101030 QNB | USD import payments |
+| Cash | Cash | EGP | 105001 Cash | Cash transactions |
+| Miscellaneous Operations | Misc | — | — | Manual journal entries |
+| Exchange Difference | Misc | — | — | System — FX differences |
+| تقييم المخزون | Misc | — | — | System — inventory valuation |
+
+### Key Notes
+- Bank Feeds: Manual in Community (no automatic import)
+- Suspense Account: 201001 used for unmatched bank transactions
+- QNB journal currency set to USD for import purchases
+
 ## Key Decisions Log
 
 | Decision | Alternatives Considered | Chosen Because |
