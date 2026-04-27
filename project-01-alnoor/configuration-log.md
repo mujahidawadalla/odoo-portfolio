@@ -122,6 +122,27 @@
 - Reorder Rules: Automatic (system triggers PO when stock hits minimum)
 - Reorder Rules setup: Pending — to be configured per product
 
+## Purchase Settings
+
+| Setting | Value | Reason |
+|---------|-------|--------|
+| PO Approval | ✅ 50,000 EGP | Matches sales approval policy |
+| Lock Confirmed Orders | ✅ Enabled | Prevent price/quantity edits after confirmation |
+| Warnings | ✅ Enabled | Alert buyers about vendor-specific issues |
+| Purchase Agreements | ✅ Enabled | Long-term contracts with fixed suppliers |
+| Receipt Reminder | ✅ Enabled | Critical for import shipments |
+| Bill Control | Received Quantities | Pay only for goods actually received |
+| 3-way Matching | ❌ Enterprise only | Manual verification applied instead |
+| Dropshipping | ❌ Disabled | Company handles own delivery |
+
+## Purchase Settings Disabled & Why
+
+| Setting | Reason |
+|---------|--------|
+| Variants | Independent products not variants |
+| Product Packagings | Materials sold by m² not packages |
+| Dropshipping | Not part of business model |
+| 3-way Matching | Enterprise feature — manual review instead |
 
 ## Key Decisions Log
 
