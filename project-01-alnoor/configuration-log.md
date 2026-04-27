@@ -186,6 +186,17 @@
 | 300001 رأس المال | Equity | — | 1,200,000 |
 | 300002 أرباح محتجزة | Equity | — | 320,000 |
 
+## AR Follow-up Levels
+
+| Level | Action | Due Days | Email | Letter | Manual |
+|-------|--------|----------|-------|--------|--------|
+| 1 | Send first reminder email | 7 days | ✅ | ❌ | ❌ |
+| 2 | Call the customer and send email | 15 days | ✅ | ❌ | ✅ |
+| 3 | Legal message, phone call and email | 30 days | ✅ | ✅ | ✅ |
+
+**Strategy:** Escalating follow-up to minimize overdue receivables
+without damaging customer relationships.
+
 ## Key Decisions Log
 
 | Decision | Alternatives Considered | Chosen Because |
