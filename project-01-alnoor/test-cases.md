@@ -70,10 +70,12 @@
 ---
 
 ## TC-005 — Bank Reconciliation
-**Status: ⬜ Pending**
-
+**Status: ⏸️ Deferred**
+**Reason:** Odoo 18 Community Bank Reconciliation workflow 
+differs from previous versions. To be investigated and 
+completed in next session.
+**Priority:** High — required for monthly close process
 ---
-
 ## TC-006 — Aged Receivables Report
 **Status: ⬜ Pending**
 
