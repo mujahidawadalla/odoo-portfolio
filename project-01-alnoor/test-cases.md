@@ -54,9 +54,43 @@
 
 ---
 
-## TC-002 — Full Sales Cycle (Credit Customer)
-**Status: ⬜ Pending**
+## TC-002 — Sales Cycle Without Payment (Credit Customer)
 
+**Scenario:** Standard sale to Outside of Cairo customers without payment
+
+| Field | Value |
+|-------|-------|
+| Customer | [     شركة اﻹسكندرية للتطوير    ] |
+| Product | [      بلاط أرضي بيج 40×40    ] |
+| Quantity | [    100 m²      ] |
+| Unit Price | [    70 EGP      ] |
+| Tax | [    VAT 14%     ] |
+| Payment Terms | [     60 Days     ] |
+| Expected Total | [     7980 EGP (incl. VAT 14%)     ] |
+
+### Steps & Results
+
+| # | Step | Expected | Actual | Status |
+|---|------|----------|--------|--------|
+| 1 | Create Quotation | SO created with VAT | [S00002 - 7980 EGP ] | [✅ Pass  ] |
+| 2 | Confirm Sales Order | Delivery auto-created | [GIZ/OUT/00002 ] | [✅ Pass  ] |
+| 3 | Validate Delivery | Stock deducted 100 m² | [✅ Delivered = 100 ] | [✅ Pass  ] |
+| 4 | Create Invoice | Invoice from SO | [الفات/2026/00002 ] | [✅ Pass  ] |
+| 5 | Confirm Invoice | Journal Entry posted | [✅ Dr. AR 7980 ] | [✅ Pass  ] |
+| 6 | Verify Aged Receivables | Invoice appears unpaid | [✅ شركة الإسكندرية —EGP 7,980 في عمود 0-30 ] | [✅ Pass  ] |
+
+### Journal Entry Generated
+| Account | Debit | Credit |
+|---------|-------|--------|
+| [  	102021 عملاء خارج القاهرة     ] | [ 7980.00 LE  ] | — |
+| [  	201017 VAT Output   ] | — | [ 980.00 LE  ] |
+| [  	500015 ايرادات سيراميك   ] | — | [ 7000.00 LE  ] |
+
+### Issues Found
+| # | Issue | Impact | Solution |
+|---|-------|--------|---------|
+| 1 | [    Income Account defaulted to 500001   ] | [   Wrong revenue account on invoice   ] | [   Set income account on product to 500015   ] |
+| 2 | [    AR Account defaulted to 102011     ] | [   Cannot differentiate between local and outside Cairo customers in AR reports  ] | [  Set AR account on contact to 102021   ] |
 ---
 
 ## TC-003 — Customer Return + Credit Note
