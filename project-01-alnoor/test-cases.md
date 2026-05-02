@@ -72,10 +72,10 @@
 
 | # | Step | Expected | Actual | Status |
 |---|------|----------|--------|--------|
-| 1 | Create Quotation | SO created with VAT | S00002 - 7980 EGP  | ✅ Pass   |
-| 2 | Confirm Sales Order | Delivery auto-created | GIZ/OUT/00002  | ✅ Pass   |
-| 3 | Validate Delivery | Stock deducted 100 m² | ✅ Delivered = 100 ] | ✅ Pass   |
-| 4 | Create Invoice | Invoice from SO | 2026/00002/الفات | [✅ Pass  ] |
+| 1 | Create Quotation | SO created with VAT | ✅ S00002 - 7980 EGP  | ✅ Pass   |
+| 2 | Confirm Sales Order | Delivery auto-created | ✅ GIZ/OUT/00002  | ✅ Pass   |
+| 3 | Validate Delivery | Stock deducted 100 m² | ✅ Delivered = 100  | ✅ Pass   |
+| 4 | Create Invoice | Invoice from SO | ✅ 2026/00002/الفات | ✅ Pass   |
 | 5 | Confirm Invoice | Journal Entry posted | ✅ Dr. AR 7980  | ✅ Pass   |
 | 6 | Verify Aged Receivables | Invoice appears unpaid | ✅ شركة الإسكندرية —EGP 7,980 في عمود 0-30  | ✅ Pass   |
 
