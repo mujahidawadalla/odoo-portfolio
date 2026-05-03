@@ -76,7 +76,7 @@
 | 2 | Confirm Sales Order | Delivery auto-created | ✅ GIZ/OUT/00002  | ✅ Pass   |
 | 3 | Validate Delivery | Stock deducted 100 m² | ✅ Delivered = 100  | ✅ Pass   |
 | 4 | Create Invoice | Invoice from SO | ✅ 2026/00002/الفات | ✅ Pass   |
-| 5 | Confirm Invoice | Journal Entry posted | ✅ Dr. AR 7980  | ✅ Pass   |
+| 5 | Confirm Invoice | Journal Entry posted | ✅ Dr. AR 7980  | ✅ Pass	   |
 | 6 | Verify Aged Receivables | Invoice appears unpaid | ✅ شركة الإسكندرية —EGP 7,980 في عمود 0-30  | ✅ Pass   |
 
 ### Journal Entry Generated
@@ -132,7 +132,42 @@
 ---
 
 ## TC-004 — Full Purchase Cycle
-**Status: ⬜ Pending**
+
+**Scenario:** Standard Purchase from local Vendor 
+
+| Field | Value |
+|-------|-------|
+| Vendor | شركة ألوان مصر للدهانات |
+| Product | دهان أبيض 10 لتر |
+| Quantity | 100 Units |
+| Unit Price | 68 EGP |
+| Tax | VAT 14% |
+| Payment Terms | Cash |
+| Expected Total | 	7,752.00 LE |
+
+### Steps & Results
+
+| # | Step | Expected | Actual | Status |
+|---|------|----------|--------|--------|
+| 1 | Create RFQ | PO created | ✅ P00001 - 7,752.00 EGP | ✅ Pass |
+| 2 | Confirm PO | Receipt Auto created | ✅ GIZ/IN/00002 | ✅ Pass |
+| 3 | Receive Products | Stock increased | ✅ Received = 100 | ✅ Pass |
+| 4 | Create Bill | Bill from PO | ✅ فاتور/2026/05/0001| ✅ Pass |
+| 5 | Confirm Bill | Journal entry created | ✅	Cr. AP 7,752 | ✅ Pass |
+| 6 | Register Payment | Bill paid | ✅ 7,752.00 via Cash | ✅ Pass |
+
+### Journal Entry Generated
+| Account | Debit | Credit |
+|---------|-------|--------|
+| 	106013 مخزون دهانات | 6,800.00 LE | — |
+| 	104041 VAT Input | 952.00 LE | — |
+| 	201002 Payables | — | 7,752.00 LE |
+
+### Issues Found
+| # | Issue | Impact | Solution |
+|---|-------|--------|---------|
+| 1 | Product expense account defaulted to 400028 Others | Wrong expense account | Set at 106013 مخزون دهانات |
+| 2 | Vendor AP account defaulted to 201002 Payables | Cannot differentiate local vs foreign vendors | Set AP account on Contact to 201031 موردو الداخل |
 
 ---
 
