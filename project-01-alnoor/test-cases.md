@@ -91,11 +91,44 @@
 |---|-------|--------|---------|
 | 1 |     Income Account defaulted to 500001    |    Wrong revenue account on invoice    |    Set income account on product to 500015    |
 | 2 |     AR Account defaulted to 102011      |    Cannot differentiate between local and outside Cairo customers in AR reports   |   Set AR account on contact to 102021    |
+
 ---
 
 ## TC-003 — Customer Return + Credit Note
-**Status: ⬜ Pending**
 
+**Scenario:** Partial return of 20 m² damaged goods from invoice الفات/2026/00001
+
+| Field | Value |
+|-------|-------|
+| Customer |        شركة النيل للمقاولات     |
+| Original Invoice |        الفات/2026/00001    |
+| Product |  سيراميك أبيض 60×60 |
+| Return Quantity | 20 m²  |
+| Unit Price | 85 EGP |
+| Expected Credit | 1,938 EGP |
+
+### Steps & Results
+
+| # | Step | Expected | Actual | Status |
+|---|------|----------|--------|--------|
+| 1 | Return Delivery | Return transfer created (GIZ/IN/00001)  | ✅ GIZ/IN/00001 — 20 m² returned to stock  | ✅ Pass |
+| 2 | Validate Return | Return transfer validated (GIZ/IN/00001) | ✅ GIZ/IN/00001 — 20 m² returned to stock | ✅ Pass |
+| 3 | Create Credit Note | Credit Note created (Rالفات/2026/00001) | ✅ Rالفات/2026/00001 Credit Note created | ✅ Pass |
+| 4 | Adjust Quantity to 20 m² | Modify quantity to 20 m² | ✅ 20 m² Credit Note value | ✅ Pass |
+| 5 | Confirm Credit Note | Confirm the Credit Note | ✅ Rالفات/2026/00001 Credit note confirmed | ✅ Pass |
+
+### Journal Entry Generated
+| Account | Debit | Credit |
+|---------|-------|--------|
+| 500015 ايرادات سيراميك | 1,700.00 LE | — |
+| 201017 VAT Output | 238.00 LE | — |
+| 102011 Accounts Receivable | — | 1,938.00 LE |
+
+### Issues Found
+| # | Issue | Impact | Solution |
+|---|-------|--------|---------|
+| 1 | Credit Note Quantity | opened with (100 m²) | Modify manually to 20 m² |
+| 2 | AR Account defaulted to 102011 | Cannot differentiate local vs outside Cairo customers | Set AR account on Contact to 102020 |
 ---
 
 ## TC-004 — Full Purchase Cycle
