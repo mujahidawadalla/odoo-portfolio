@@ -179,7 +179,33 @@ completed in next session.
 **Priority:** High — required for monthly close process
 ---
 ## TC-006 — Aged Receivables Report
-**Status: ⬜ Pending**
+
+**Scenario:** Verify outstanding customer balances appear correctly in Aged Receivables
+
+| Field | Value |
+|-------|-------|
+| Report | Aged Receivables |
+| Start Date | 05/03/2026 |
+| Period Length | 30 days |
+| Target Moves | All Posted Entries |
+
+### Steps & Results
+
+| # | Step | Expected | Actual | Status |
+|---|------|----------|--------|--------|
+| 1 | Open Aged Receivables | Report loads | ✅ Report loaded successfully | ✅ Pass |
+| 2 | Verify شركة الإسكندرية | 7,980 EGP in Not Due (60 days payment terms) | ✅ Verified successfully | ✅ Pass |
+| 3 | Verify شركة النيل | 7,752 EGP in Not Due  | ✅ Verified successfully | ✅ Pass |
+| 4 | Verify Credit Note impact |  النيل balance = 9,690 - 1,938 = 7,752 EGP | ✅ Verified successfully | ✅ Pass |
+
+### Report Results
+| Partner | Not Due | 0-30 | Total |
+|---------|---------|------|-------|
+| شركة اﻹسكندرية للتطوير | 7,980.00 LE | 0.00 LE | 7,980.00 LE |
+| شركة النيل للمقاولات | 7,752.00 LE | 0.00 LE | 7,752.00 LE |
+
+### Issues Found
+None — report verified successfully
 
 ---
 
