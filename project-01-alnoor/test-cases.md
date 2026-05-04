@@ -210,7 +210,23 @@ None — report verified successfully
 ---
 
 ## TC-007 — AR Follow-up Automation
-**Status: ⬜ Pending**
+
+**Scenario:** Verify follow-up levels trigger correctly 
+for overdue invoices in Odoo 18 Community
+
+| Field | Value |
+|-------|-------|
+| Customer | شركة سيناء للإنشاءات |
+| Invoice | الفات/2026/00003 |
+| Due Date | 04/26/2026 |
+| Days Overdue | 7 days |
+| Expected Level | Level 1 — Email |
+
+### Issues Found
+| # | Issue | Impact | Solution |
+|---|-------|--------|---------|
+| 1 | No automated Follow-up Scheduled Action in Odoo 18 Community | Follow-up levels not assigned automatically | Run Follow-up manually via Follow-Ups → Send Letters and Emails |
+| 2 | Send Overdue Email returns Invalid Operation error |  Cannot send follow-up emails directly from Contact | Configure email template in Accounting → Configuration → Follow-up Levels |
 
 ---
 
@@ -218,4 +234,4 @@ None — report verified successfully
 
 | Total Tests | Passed | Failed | Pending | Deferred |
 |-------------|--------|--------|---------|---------|
-| 7 | 1 | 0 | 5 | 1 |
+| 7 | 6 | 0 | 0 | 1 |
