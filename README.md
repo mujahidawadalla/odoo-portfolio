@@ -26,8 +26,8 @@ Each project is fully documented: from Business Analysis to Go-Live.
 
 | # | Project | Industry | Level | Modules | Status |
 |---|---------|----------|-------|---------|--------|
-| 1 | [🏪 Al-Noor Trading](./project-01-alnoor/) | Wholesale | 🟢 Junior | Sales · Accounting · Inventory · Purchase | 🔄 In Progress |
-| 2 | [🚗 Prestige Motors](./project-02-prestige/) | Automotive | 🟡 Mid | CRM · Sales · Helpdesk | ⏳ Planned |
+| 1 | [🏪 Al-Noor Trading](./project-01-alnoor/) | Wholesale | 🟢 Junior | Sales · Accounting · Inventory · Purchase | Complete ✅ |
+| 2 | [🚗 Prestige Motors](./project-02-prestige/) | Automotive | 🟡 Mid | CRM · Sales · Helpdesk | 🔄 In Progress |
 | 3 | [🚛 Gulf Logistics](./project-03-gulf-logistics/) | 3PL / Freight | 🟠 Mid-Senior | Inventory · WMS · Barcode | ⏳ Planned |
 | 4 | [🏥 MedTech Solutions](./project-04-medtech/) | Medical Devices | 🔴 Senior | Full Suite · Studio · Automation | ⏳ Planned |
 
