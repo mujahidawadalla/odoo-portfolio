@@ -4,8 +4,8 @@
 
 **Mujahid Awadalla | Odoo Functional Consultant**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](your-linkedin-url)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat&logo=gmail)](mailto:your-email)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mujahid-awadallah/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat&logo=gmail)](mujahidawadalla4@gmail.com)
 [![Odoo](https://img.shields.io/badge/Odoo-18%20Community-875A7B?style=flat)](https://odoo.com)
 
 </div>
