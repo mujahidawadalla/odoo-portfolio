@@ -1,7 +1,7 @@
 # 🏪 Al-Noor Trading Co.
 ### Odoo 18 Community — Full Implementation
 
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Level](https://img.shields.io/badge/Level-Junior-brightgreen)
 ![Odoo](https://img.shields.io/badge/Odoo-18%20Community-875A7B)
 ![Industry](https://img.shields.io/badge/Industry-Wholesale-blue)
@@ -117,13 +117,13 @@ Cr. Customer     114,000
 
 | Test ID | Scenario | Result |
 |---------|---------|--------|
-| TC-001 | Full sales cycle — cash payment | ⬜ Pending |
-| TC-002 | Full sales cycle — 30-day credit | ⬜ Pending |
-| TC-003 | Customer return + credit note | ⬜ Pending |
-| TC-004 | Full purchase cycle + vendor bill | ⬜ Pending |
-| TC-005 | Bank statement reconciliation | ⬜ Pending |
-| TC-006 | Aged Receivables report accuracy | ⬜ Pending |
-| TC-007 | Automated AR follow-up email | ⬜ Pending |
+| TC-001 | Full sales cycle — cash payment | ✅ Pass |
+| TC-002 | Full sales cycle — 30-day credit | ✅ Pass |
+| TC-003 | Customer return + credit note | ✅ Pass |
+| TC-004 | Full purchase cycle + vendor bill | ✅ Pass |
+| TC-005 | Bank statement reconciliation | ✅ Pass |
+| TC-006 | Aged Receivables report accuracy | ✅ Pass |
+| TC-007 | Automated AR follow-up email | ✅ Pass |
 
 ---
 

@@ -10,7 +10,7 @@
 | Vendors | 8 | CSV Import | ✅ Done |
 | Products | 15 | CSV Import | ✅ Done |
 | Opening Stock | 15 lines | Physical Inventory | ✅ Done |
-| Opening Balances | — | Journal Entry | ⬜ Pending |
+| Opening Balances | — | Journal Entry | ✅ Done |
 
 ---
 
